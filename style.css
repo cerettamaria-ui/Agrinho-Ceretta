@@ -1,0 +1,162 @@
+/* Cores e Fontes */
+:root {
+    --verde-vivo: #2ecc71;
+    --verde-escuro: #27ae60;
+    --amarelo-sol: #f1c40f;
+    --laranja-terra: #e67e22;
+    --fundo-leve: #f4f9f4;
+    --texto-escuro: #2c3e50;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: var(--fundo-leve);
+    color: var(--texto-escuro);
+    line-height: 1.6;
+}
+
+/* Header e Hero */
+header {
+    background: linear-gradient(135deg, var(--verde-escuro), var(--verde-vivo));
+    color: white;
+    padding: 4rem 2rem;
+    text-align: center;
+    border-bottom-left-radius: 50px;
+    border-bottom-right-radius: 50px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
+
+.emoji-pop {
+    font-size: 4rem;
+    animation: balanco 3s ease-in-out infinite;
+    display: inline-block;
+}
+
+h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+}
+
+.subtitle {
+    font-size: 1.4rem;
+    font-weight: 300;
+    background: rgba(255, 255, 255, 0.2);
+    display: inline-block;
+    padding: 0.5rem 1.5rem;
+    border-radius: 25px;
+}
+
+/* Seção de Superpoderes (Cards) */
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 3rem 1.5rem;
+}
+
+h2 {
+    text-align: center;
+    font-size: 2.2rem;
+    color: var(--verde-escuro);
+    margin-bottom: 2rem;
+}
+
+.grid-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+}
+
+.card {
+    background: white;
+    padding: 2rem;
+    border-radius: 20px;
+    text-align: center;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 3px solid transparent;
+}
+
+.card:hover {
+    transform: translateY(-10px) rotate(1deg);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+    border-color: var(--amarelo-sol);
+}
+
+.card .icon {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.card h3 {
+    color: var(--laranja-terra);
+    margin-bottom: 0.5rem;
+    font-size: 1.5rem;
+}
+
+/* Seção Curiosidades Dinâmicas */
+.curiosidades {
+    background-color: #ebf5fb;
+    padding: 3rem 2rem;
+    border-radius: 30px;
+    margin-top: 2rem;
+    text-align: center;
+}
+
+.btn-divertido {
+    background-color: var(--laranja-terra);
+    color: white;
+    border: none;
+    padding: 1rem 2rem;
+    font-size: 1.1rem;
+    font-weight: bold;
+    border-radius: 50px;
+    cursor: pointer;
+    box-shadow: 0 5px 10px rgba(0,0,0,0.15);
+    transition: all 0.2s;
+    margin-top: 1rem;
+}
+
+.btn-divertido:hover {
+    background-color: #d35400;
+    transform: scale(1.05);
+}
+
+.fact-box {
+    margin-top: 1.5rem;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: var(--verde-escuro);
+    min-height: 50px;
+}
+
+/* Rodapé */
+footer {
+    text-align: center;
+    padding: 2rem;
+    margin-top: 4rem;
+    background-color: var(--texto-escuro);
+    color: white;
+    font-size: 0.9rem;
+}
+
+/* Animações */
+@keyframes balanco {
+    0%, 100% { transform: translateY(0) rotate(0deg); }
+    50% { transform: translateY(-15px) rotate(5deg); }
+}
+
+@keyframes pop {
+    0% { transform: scale(0.8); opacity: 0; }
+    100% { transform: scale(1); opacity: 1; }
+}
+
+.animar-fact {
+    animation: pop 0.4s ease-out;
+}
