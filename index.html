@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agro Forte, Futuro Sustentável! 🌾✨</title>
+</head>
+<body>
+
+    <header>
+        <div class="emoji-pop">🚜🌱🐝</div>
+        <h1>Agro Forte, Futuro Sustentável!</h1>
+        <p class="subtitle">Quem disse que salvar o planeta com a tecnologia do campo não pode ser divertido?</p>
+    </header>
+
+    <div class="container">
+        
+        <h2>Os Superpoderes do Nosso Agro 🚀</h2>
+        
+        <div class="grid-cards">
+            
+            <div class="card">
+                <div class="icon">🤖🌾</div>
+                <h3>Tecnologia Popstar</h3>
+                <p>Drones que vigiam as plantações, tratores que dirigem sozinhos e sensores que conversam com as plantas. O campo hoje é puro estilo!</p>
+            </div>
+
+            <div class="card">
+                <div class="icon">💧 protetor</div>
+                <h3>Gota Poupança</h3>
+                <p>Cuidar da água é nossa missão! Com a irrigação gota a gota inteligente, as plantas bebem a quantidade exata e ninguém passa sede.</p>
+            </div>
+
+            <div class="card">
+                <div class="icon">🐞❤️</div>
+                <h3>Bio-Defensores</h3>
+                <p>Joaninhas e micro-organismos do bem entram em campo para proteger os alimentos. Menos química, mais vida e muito mais bio-amor!</p>
+            </div>
+
+            <div class="card">
+                <div class="icon">🔄🌳</div>
+                <h3>Combo Perfeito</h3>
+                <p>Misturar floresta, pasto e lavoura no mesmo lugar? Sim! A ILPF (Integração Lavoura-Pecuária-Floresta) deixa a terra feliz e o clima fresco.</p>
+            </div>
+
+        </div>
+
+        <div class="curiosidades">
+            <h2>💡 Almanaque do Agro Sustentável</h2>
+            <p>Clique no botão abaixo para descobrir uma curiosidade incrível sobre como o agro cuida do amanhã!</p>
+            
+            <button class="btn-divertido" onclick="mostrarCuriosidade()">Gerar Fato Agro-Sustentável 🎲</button>
+            
+            <div class="fact-box" id="factDisplay">Clique no botão para começar! 👇</div>
+        </div>
+
+    </div>
+
+    <footer>
+        <p>Feito com 💚, sol ☀️ e muita tecnologia para um amanhã melhor. Agro Forte © 2026</p>
+    </footer>
+
+    <script>
+        const fatos = [
+            "🛰️ Os satélites ajudam os produtores a saber a saúde exata de cada folha lá do espaço!",
+            "🐝 As abelhas ganharam 'corredores ecológicos' exclusivos para polinizar em segurança!",
+            "🌱 Uma única semente hoje produz muito mais do que há 20 anos, poupando espaço e florestas!",
+            "💩 O esterco dos animais vira biogás, gerando energia limpa para acender as luzes da fazenda!",
+            "🌾 Plantar sem revirar o solo (Plantio Direto) protege a terra e impede que o carbono escape para o ar!"
+        ];
+
+        function mostrarCuriosidade() {
+            const display = document.getElementById('factDisplay');
+            
+            // Escolhe um fato aleatório diferente do atual
+            const indiceAleatorio = Math.floor(Math.random() * fatos.length);
+            
+            // Aplica o texto e reinicia a animação
+            display.innerText = fatos[indiceAleatorio];
+            display.classList.remove('animar-fact');
+            void display.offsetWidth; // Truque para resetar animação CSS
+            display.classList.add('animar-fact');
+        }
+    </script>
+
+</body>
+</html>
